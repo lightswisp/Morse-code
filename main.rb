@@ -2,9 +2,7 @@ require "wavefile"
 
 OUTPUT_FILENAME = "mysound.wav"
 SAMPLE_RATE = 44100
-SECONDS_TO_GENERATE = 2
 TWO_PI = 2 * Math::PI
-RANDOM_GENERATOR = Random.new
 AMPLITUDE	= 0.6 # Should be between 0.0 (silence) and 1.0 (full volume).
                 # Amplitudes above 1.0 will result in clipping distortion.
 
@@ -26,10 +24,7 @@ MORSE_CODE_RATIO = {
 # 
 # :dot :symbol_space :dash :word_space :dot :symbol_space :dash
 # 
-# [
-	# [0.1, DEFAULT_FREQUENCY, AMPLITUDE], # :dot
-	# [0.1, DEFAULT_FREQUENCY, AMPLITUDE]  # :symbol space
-# ]
+
 
 
 
@@ -75,20 +70,6 @@ end
 
 def main
 
-	
-  # Generate sample data at the given frequency and amplitude.
-  # The sample rate indicates how many samples we need to generate for
-  # music_sample = [
-  	# [1, 440.0, AMPLITUDE],
-  	# [1, 490.0, AMPLITUDE],
-  	# [1, 530.0, AMPLITUDE]
-  # ]
-  # samples = generate_sequence_of_sample_data(music_sample)
-  #num_samples = SAMPLE_RATE * 1
-  #samples = [].fill(0.0, 0, 0)
- #samples = generate_sample_data(1, 440.0, AMPLITUDE)
-
-#D E F F E E F D C D D E C G F
 	if !ARGV[0]
 		puts "Please provide your text as an argument!"
 		exit
